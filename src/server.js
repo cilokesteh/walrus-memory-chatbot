@@ -15,13 +15,24 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../public')));
 
 const memoryClient = new WalrusMemoryClient();
+
+// Pre-seed memories from verified simulation so the live server remembers immediately!
+const simFile = path.join(__dirname, '../simulation_results.json');
+if (fs.existsSync(simFile)) {
+  const simData = JSON.parse(fs.readFileSync(simFile, 'utf-8'));
+  for (const user of simData) {
+    const namespace = `user_${user.userId}`;
+    memoryClient.localStore.set(namespace, user.memories || []);
+  }
+  console.log(`[Memory] Pre-loaded memories for ${simData.length} users into live memory store.`);
+}
+
 const bot = new ChatbotEngine(memoryClient);
 
-// Load simulation data
+// Simulation history endpoint
 app.get('/api/simulation', (req, res) => {
-  const filePath = path.join(__dirname, '../simulation_results.json');
-  if (fs.existsSync(filePath)) {
-    const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  if (fs.existsSync(simFile)) {
+    const data = JSON.parse(fs.readFileSync(simFile, 'utf-8'));
     res.json(data);
   } else {
     res.json([]);
@@ -40,6 +51,12 @@ app.post('/api/chat', async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
+});
+
+// User memory inspection endpoint
+app.get('/api/memories/:userId', async (req, res) => {
+  const memories = await memoryClient.listMemories(req.params.userId);
+  res.json({ userId: req.params.userId, count: memories.length, memories });
 });
 
 app.listen(PORT, () => {
