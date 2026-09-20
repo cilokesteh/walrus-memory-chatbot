@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walrus Memory AI Chatbot — Live Showcase</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: #07090e; color: #f8fafc; }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="min-h-screen p-4 md:p-8">
+  <div class="max-w-5xl mx-auto space-y-6">
+    <!-- Header -->
+    <header class="border border-slate-800 bg-slate-900/50 backdrop-blur rounded-2xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 rounded-full text-xs font-mono mb-2">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+          WALRUS SESSION 8 HACKATHON
+        </div>
+        <h1 class="text-2xl md:text-3xl font-bold tracking-tight">Chatbots That Remember</h1>
+        <p class="text-slate-400 text-sm mt-1">Cross-session portable memory powered by Walrus Memory (<code class="text-cyan-300">MystenLabs/MemWal</code>)</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="text-right">
+          <div class="text-xs text-slate-500 font-mono">LLM BACKEND</div>
+          <div class="text-sm font-semibold text-emerald-400 font-mono">DeepSeek-V3 / Gemini</div>
+        </div>
+        <span class="px-3 py-1 bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 rounded-lg text-xs font-mono font-bold">ONLINE</span>
+      </div>
+    </header>
+
+    <!-- User Selector & Memory Stats -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <button onclick="switchUser('alice_investor')" id="btn-alice" class="p-4 rounded-xl border border-cyan-500/40 bg-cyan-950/20 text-left transition hover:border-cyan-400">
+        <div class="flex justify-between items-center mb-1">
+          <span class="font-bold text-cyan-300">Alice (DeFi Trader)</span>
+          <span id="badge-alice" class="text-xs px-2 py-0.5 rounded bg-cyan-900 text-cyan-200 font-mono">10 memories</span>
+        </div>
+        <p class="text-xs text-slate-400">Liquid staking, Sui swaps, Scallop lending</p>
+      </button>
+
+      <button onclick="switchUser('bob_developer')" id="btn-bob" class="p-4 rounded-xl border border-slate-800 bg-slate-900/40 text-left transition hover:border-slate-700">
+        <div class="flex justify-between items-center mb-1">
+          <span class="font-bold text-slate-200">Bob (Developer)</span>
+          <span id="badge-bob" class="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">11 memories</span>
+        </div>
+        <p class="text-xs text-slate-400">Next.js 15, Move, Drizzle, Vercel CI/CD</p>
+      </button>
+
+      <button onclick="switchUser('charlie_support')" id="btn-charlie" class="p-4 rounded-xl border border-slate-800 bg-slate-900/40 text-left transition hover:border-slate-700">
+        <div class="flex justify-between items-center mb-1">
+          <span class="font-bold text-slate-200">Charlie (Support Lead)</span>
+          <span id="badge-charlie" class="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">11 memories</span>
+        </div>
+        <p class="text-xs text-slate-400">CloudScale enterprise SLA, webhooks, emergency contacts</p>
+      </button>
+    </div>
+
+    <!-- Main Live Interface -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Chat Box (2 cols) -->
+      <div class="md:col-span-2 border border-slate-800 bg-slate-900/30 rounded-2xl p-4 flex flex-col h-[520px]">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+          <div class="flex items-center gap-2">
+            <div class="w-2.5 h-2.5 rounded-full bg-cyan-400"></div>
+            <span class="text-sm font-semibold" id="current-user-title">Alice — Session Logs</span>
+          </div>
+          <span class="text-xs font-mono text-slate-500">Decentralized Context Rehydration</span>
+        </div>
+
+        <div id="chat-messages" class="flex-1 overflow-y-auto space-y-4 py-4 pr-2 text-sm">
+          <!-- Populated by JS -->
+        </div>
+
+        <form onsubmit="sendMessage(event)" class="pt-3 border-t border-slate-800 flex gap-2">
+          <input type="text" id="chat-input" placeholder="Type a message to test memory..." class="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-cyan-500 font-sans">
+          <button type="submit" class="px-5 py-2.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl text-sm transition">Send</button>
+        </form>
+      </div>
+
+      <!-- Memory Inspector (1 col) -->
+      <div class="border border-slate-800 bg-slate-900/30 rounded-2xl p-4 flex flex-col h-[520px]">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+          <span class="text-sm font-semibold text-cyan-300">Walrus Memory Vault</span>
+          <span class="text-xs font-mono bg-cyan-950 text-cyan-400 border border-cyan-800 px-2 py-0.5 rounded">Auto-Indexed</span>
+        </div>
+        <p class="text-xs text-slate-500 mt-2">Decentralized facts stored & retrieved across sessions:</p>
+
+        <div id="memory-list" class="flex-1 overflow-y-auto space-y-2 py-3 pr-1 text-xs">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentUserId = 'alice_investor';
+    let simulationData = {};
+
+    async function loadData() {
+      try {
+        const res = await fetch('/api/simulation');
+        const data = await res.json();
+        data.forEach(item => {
+          simulationData[item.userId] = item;
+        });
+        renderUser();
+      } catch (e) {
+        console.error('Failed to load data', e);
+      }
+    }
+
+    function switchUser(userId) {
+      currentUserId = userId;
+      ['alice', 'bob', 'charlie'].forEach(name => {
+        const btn = document.getElementById(`btn-${name}`);
+        if (currentUserId.includes(name)) {
+          btn.className = 'p-4 rounded-xl border border-cyan-500/40 bg-cyan-950/20 text-left transition hover:border-cyan-400';
+        } else {
+          btn.className = 'p-4 rounded-xl border border-slate-800 bg-slate-900/40 text-left transition hover:border-slate-700';
+        }
+      });
+      renderUser();
+    }
+
+    function renderUser() {
+      const user = simulationData[currentUserId];
+      if (!user) return;
+
+      document.getElementById('current-user-title').innerText = `${user.userName} — Verified Session`;
+
+      // Render chat
+      const chatContainer = document.getElementById('chat-messages');
+      chatContainer.innerHTML = '';
+      user.turns.forEach(turn => {
+        // User turn
+        const userDiv = document.createElement('div');
+        userDiv.className = 'flex flex-col items-end gap-1';
+        userDiv.innerHTML = `
+          <div class="bg-cyan-600 text-white rounded-2xl rounded-tr-none px-4 py-2 max-w-[85%]">
+            ${turn.userMessage}
+          </div>
+          <span class="text-[10px] text-slate-500">User Turn ${turn.turn}</span>
+        `;
+        chatContainer.appendChild(userDiv);
+
+        // Bot response
+        const botDiv = document.createElement('div');
+        botDiv.className = 'flex flex-col items-start gap-1';
+
+        let memoryBadge = '';
+        if (turn.recalled && turn.recalled.length > 0) {
+          memoryBadge = `
+            <div class="mb-1 p-2 rounded-lg bg-slate-950 border border-cyan-500/20 text-[11px] text-cyan-300">
+              <span class="font-bold">🧠 Recalled Walrus Memory (${turn.recalled.length}):</span>
+              <ul class="list-disc pl-4 mt-1 text-slate-400">
+                ${turn.recalled.map(r => `<li>${r}</li>`).join('')}
+              </ul>
+            </div>
+          `;
+        }
+
+        botDiv.innerHTML = `
+          <div class="bg-slate-800/80 border border-slate-700/50 rounded-2xl rounded-tl-none p-3 max-w-[90%] text-slate-200">
+            ${memoryBadge}
+            ${turn.botReply}
+          </div>
+          <span class="text-[10px] text-slate-500">Walrus Memory Agent</span>
+        `;
+        chatContainer.appendChild(botDiv);
+      });
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+
+      // Render memories
+      const memoryList = document.getElementById('memory-list');
+      memoryList.innerHTML = '';
+      user.memories.forEach((m, idx) => {
+        const item = document.createElement('div');
+        item.className = 'p-2.5 rounded-lg bg-slate-950 border border-slate-800 flex flex-col gap-1';
+        item.innerHTML = `
+          <div class="flex justify-between items-center text-[10px] text-slate-500 font-mono">
+            <span>MEM #${idx + 1}</span>
+            <span class="text-cyan-400">${m.blobId || 'blob_walrus'}</span>
+          </div>
+          <div class="text-slate-300">${m.text}</div>
+        `;
+        memoryList.appendChild(item);
+      });
+    }
+
+    async function sendMessage(e) {
+      e.preventDefault();
+      const input = document.getElementById('chat-input');
+      const text = input.value.trim();
+      if (!text) return;
+      input.value = '';
+
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId: currentUserId, message: text })
+      });
+      const data = await res.json();
+
+      // update simulation local state
+      const user = simulationData[currentUserId];
+      user.turns.push({
+        turn: user.turns.length + 1,
+        userMessage: text,
+        recalled: data.recalledMemories.map(m => m.text),
+        botReply: data.reply,
+        totalStored: data.storedCount
+      });
+      user.memories.push({
+        text,
+        blobId: 'walrus_blob_' + Math.random().toString(16).slice(2, 10)
+      });
+      renderUser();
+    }
+
+    loadData();
+  </script>
+</body>
+</html>

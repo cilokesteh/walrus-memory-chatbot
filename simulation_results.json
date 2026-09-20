@@ -1,0 +1,666 @@
+[
+  {
+    "userId": "alice_investor",
+    "userName": "Alice (Crypto & DeFi Trader)",
+    "totalMemories": 10,
+    "memories": [
+      {
+        "id": "6bbde66e-774c-484b-bc78-dbddb391b084",
+        "userId": "alice_investor",
+        "namespace": "user_alice_investor",
+        "text": "Hi, my name is Alice and I am a DeFi trader on Sui network.",
+        "timestamp": 1789916868035,
+        "blobId": "walrus_blob_9aa69129dc864c15"
+      },
+      {
+        "id": "e47a4966-a5f1-43f0-8cff-1ee34cb057c4",
+        "userId": "alice_investor",
+        "namespace": "user_alice_investor",
+        "text": "I primarily trade liquid staking tokens like sSUI and afSUI.",
+        "timestamp": 1789916868039,
+        "blobId": "walrus_blob_53e8148a821bc5d5"
+      },
+      {
+        "id": "826559f1-7342-48b2-9384-969943a306c0",
+        "userId": "alice_investor",
+        "namespace": "user_alice_investor",
+        "text": "My preferred slippage tolerance is strictly 0.5% for all swaps.",
+        "timestamp": 1789916868041,
+        "blobId": "walrus_blob_f184dc2571c98144"
+      },
+      {
+        "id": "e24a0fb9-e45b-46e2-b54d-481bd1aaf657",
+        "userId": "alice_investor",
+        "namespace": "user_alice_investor",
+        "text": "I usually allocate $25,000 per lending pool position.",
+        "timestamp": 1789916868043,
+        "blobId": "walrus_blob_172f596305fc1403"
+      },
+      {
+        "id": "4571e5bd-39a4-4c59-8b18-df12661df478",
+        "userId": "alice_investor",
+        "namespace": "user_alice_investor",
+        "text": "My favorite lending protocol is Scallop and Navi on Sui.",
+        "timestamp": 1789916868045,
+        "blobId": "walrus_blob_e383249a3fa98db2"
+      },
+      {
+        "id": "52473d36-65cf-45df-9bae-b7c36855041e",
+        "userId": "alice_investor",
+        "namespace": "user_alice_investor",
+        "text": "Please alert me whenever borrow APY exceeds 8%.",
+        "timestamp": 1789916868047,
+        "blobId": "walrus_blob_de09d9a4b1b55ddc"
+      },
+      {
+        "id": "0e2eb7ce-8637-48a4-b459-6ddfc5d3e50e",
+        "userId": "alice_investor",
+        "namespace": "user_alice_investor",
+        "text": "I live in Jakarta (UTC+7 timezone), so keep notifications to daylight hours.",
+        "timestamp": 1789916868048,
+        "blobId": "walrus_blob_50c7c9b371703b46"
+      },
+      {
+        "id": "98be6019-df33-44a8-8cb3-462c852c2dc5",
+        "userId": "alice_investor",
+        "namespace": "user_alice_investor",
+        "text": "My wallet address ends with 7a4b and I use Sui Wallet extension.",
+        "timestamp": 1789916868050,
+        "blobId": "walrus_blob_958e709e92db61f4"
+      },
+      {
+        "id": "d2b8b1ea-d2ab-42c9-a3ff-8188ae64d805",
+        "userId": "alice_investor",
+        "namespace": "user_alice_investor",
+        "text": "I hate automated liquidation alerts during my sleeping hours.",
+        "timestamp": 1789916868053,
+        "blobId": "walrus_blob_9c9b3653271dbc62"
+      },
+      {
+        "id": "85841336-2ae0-4669-8bfc-aab34f028c20",
+        "userId": "alice_investor",
+        "namespace": "user_alice_investor",
+        "text": "My risk profile is moderate degen with focus on blue-chip yields.",
+        "timestamp": 1789916868055,
+        "blobId": "walrus_blob_b6705760b1b908d5"
+      }
+    ],
+    "turns": [
+      {
+        "turn": 1,
+        "userMessage": "Hi, my name is Alice and I am a DeFi trader on Sui network.",
+        "recalled": [],
+        "botReply": "Hello! I have recorded your message: \"Hi, my name is Alice and I am a DeFi trader on Sui network.\". How can I help you further today?",
+        "totalStored": 1
+      },
+      {
+        "turn": 2,
+        "userMessage": "I primarily trade liquid staking tokens like sSUI and afSUI.",
+        "recalled": [
+          "Hi, my name is Alice and I am a DeFi trader on Sui network."
+        ],
+        "botReply": "I remember from our previous conversation that Hi, my name is Alice and I am a DeFi trader on Sui network.. Regarding \"I primarily trade liquid staking tokens like sSUI and afSUI.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 2
+      },
+      {
+        "turn": 3,
+        "userMessage": "My preferred slippage tolerance is strictly 0.5% for all swaps.",
+        "recalled": [
+          "Hi, my name is Alice and I am a DeFi trader on Sui network.",
+          "I primarily trade liquid staking tokens like sSUI and afSUI."
+        ],
+        "botReply": "I remember from our previous conversation that Hi, my name is Alice and I am a DeFi trader on Sui network.; I primarily trade liquid staking tokens like sSUI and afSUI.. Regarding \"My preferred slippage tolerance is strictly 0.5% for all swaps.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 3
+      },
+      {
+        "turn": 4,
+        "userMessage": "I usually allocate $25,000 per lending pool position.",
+        "recalled": [
+          "I primarily trade liquid staking tokens like sSUI and afSUI.",
+          "Hi, my name is Alice and I am a DeFi trader on Sui network.",
+          "My preferred slippage tolerance is strictly 0.5% for all swaps."
+        ],
+        "botReply": "I remember from our previous conversation that I primarily trade liquid staking tokens like sSUI and afSUI.; Hi, my name is Alice and I am a DeFi trader on Sui network.; My preferred slippage tolerance is strictly 0.5% for all swaps.. Regarding \"I usually allocate $25,000 per lending pool position.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 4
+      },
+      {
+        "turn": 5,
+        "userMessage": "My favorite lending protocol is Scallop and Navi on Sui.",
+        "recalled": [
+          "Hi, my name is Alice and I am a DeFi trader on Sui network.",
+          "My preferred slippage tolerance is strictly 0.5% for all swaps.",
+          "I usually allocate $25,000 per lending pool position.",
+          "I primarily trade liquid staking tokens like sSUI and afSUI."
+        ],
+        "botReply": "I remember from our previous conversation that Hi, my name is Alice and I am a DeFi trader on Sui network.; My preferred slippage tolerance is strictly 0.5% for all swaps.; I usually allocate $25,000 per lending pool position.; I primarily trade liquid staking tokens like sSUI and afSUI.. Regarding \"My favorite lending protocol is Scallop and Navi on Sui.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 5
+      },
+      {
+        "turn": 6,
+        "userMessage": "Please alert me whenever borrow APY exceeds 8%.",
+        "recalled": [
+          "My favorite lending protocol is Scallop and Navi on Sui.",
+          "I usually allocate $25,000 per lending pool position.",
+          "My preferred slippage tolerance is strictly 0.5% for all swaps.",
+          "I primarily trade liquid staking tokens like sSUI and afSUI.",
+          "Hi, my name is Alice and I am a DeFi trader on Sui network."
+        ],
+        "botReply": "I remember from our previous conversation that My favorite lending protocol is Scallop and Navi on Sui.; I usually allocate $25,000 per lending pool position.; My preferred slippage tolerance is strictly 0.5% for all swaps.; I primarily trade liquid staking tokens like sSUI and afSUI.; Hi, my name is Alice and I am a DeFi trader on Sui network.. Regarding \"Please alert me whenever borrow APY exceeds 8%.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 6
+      },
+      {
+        "turn": 7,
+        "userMessage": "I live in Jakarta (UTC+7 timezone), so keep notifications to daylight hours.",
+        "recalled": [
+          "I usually allocate $25,000 per lending pool position.",
+          "I primarily trade liquid staking tokens like sSUI and afSUI.",
+          "Hi, my name is Alice and I am a DeFi trader on Sui network.",
+          "Please alert me whenever borrow APY exceeds 8%.",
+          "My favorite lending protocol is Scallop and Navi on Sui."
+        ],
+        "botReply": "I remember from our previous conversation that I usually allocate $25,000 per lending pool position.; I primarily trade liquid staking tokens like sSUI and afSUI.; Hi, my name is Alice and I am a DeFi trader on Sui network.; Please alert me whenever borrow APY exceeds 8%.; My favorite lending protocol is Scallop and Navi on Sui.. Regarding \"I live in Jakarta (UTC+7 timezone), so keep notifications to daylight hours.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 7
+      },
+      {
+        "turn": 8,
+        "userMessage": "My wallet address ends with 7a4b and I use Sui Wallet extension.",
+        "recalled": [
+          "Hi, my name is Alice and I am a DeFi trader on Sui network.",
+          "My favorite lending protocol is Scallop and Navi on Sui.",
+          "I primarily trade liquid staking tokens like sSUI and afSUI.",
+          "I live in Jakarta (UTC+7 timezone), so keep notifications to daylight hours.",
+          "I usually allocate $25,000 per lending pool position."
+        ],
+        "botReply": "I remember from our previous conversation that Hi, my name is Alice and I am a DeFi trader on Sui network.; My favorite lending protocol is Scallop and Navi on Sui.; I primarily trade liquid staking tokens like sSUI and afSUI.; I live in Jakarta (UTC+7 timezone), so keep notifications to daylight hours.; I usually allocate $25,000 per lending pool position.. Regarding \"My wallet address ends with 7a4b and I use Sui Wallet extension.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 8
+      },
+      {
+        "turn": 9,
+        "userMessage": "I hate automated liquidation alerts during my sleeping hours.",
+        "recalled": [
+          "My wallet address ends with 7a4b and I use Sui Wallet extension.",
+          "I live in Jakarta (UTC+7 timezone), so keep notifications to daylight hours.",
+          "Hi, my name is Alice and I am a DeFi trader on Sui network.",
+          "My favorite lending protocol is Scallop and Navi on Sui.",
+          "I usually allocate $25,000 per lending pool position."
+        ],
+        "botReply": "I remember from our previous conversation that My wallet address ends with 7a4b and I use Sui Wallet extension.; I live in Jakarta (UTC+7 timezone), so keep notifications to daylight hours.; Hi, my name is Alice and I am a DeFi trader on Sui network.; My favorite lending protocol is Scallop and Navi on Sui.; I usually allocate $25,000 per lending pool position.. Regarding \"I hate automated liquidation alerts during my sleeping hours.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 9
+      },
+      {
+        "turn": 10,
+        "userMessage": "My risk profile is moderate degen with focus on blue-chip yields.",
+        "recalled": [
+          "My favorite lending protocol is Scallop and Navi on Sui.",
+          "Hi, my name is Alice and I am a DeFi trader on Sui network.",
+          "My wallet address ends with 7a4b and I use Sui Wallet extension.",
+          "My preferred slippage tolerance is strictly 0.5% for all swaps.",
+          "I hate automated liquidation alerts during my sleeping hours."
+        ],
+        "botReply": "I remember from our previous conversation that My favorite lending protocol is Scallop and Navi on Sui.; Hi, my name is Alice and I am a DeFi trader on Sui network.; My wallet address ends with 7a4b and I use Sui Wallet extension.; My preferred slippage tolerance is strictly 0.5% for all swaps.; I hate automated liquidation alerts during my sleeping hours.. Regarding \"My risk profile is moderate degen with focus on blue-chip yields.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 10
+      },
+      {
+        "turn": 11,
+        "userMessage": "Can you summarize what you know about my trading preferences?",
+        "recalled": [
+          "My risk profile is moderate degen with focus on blue-chip yields.",
+          "I hate automated liquidation alerts during my sleeping hours.",
+          "My wallet address ends with 7a4b and I use Sui Wallet extension.",
+          "My favorite lending protocol is Scallop and Navi on Sui.",
+          "My preferred slippage tolerance is strictly 0.5% for all swaps."
+        ],
+        "botReply": "I remember from our previous conversation that My risk profile is moderate degen with focus on blue-chip yields.; I hate automated liquidation alerts during my sleeping hours.; My wallet address ends with 7a4b and I use Sui Wallet extension.; My favorite lending protocol is Scallop and Navi on Sui.; My preferred slippage tolerance is strictly 0.5% for all swaps.. Regarding \"Can you summarize what you know about my trading preferences?\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 10
+      }
+    ]
+  },
+  {
+    "userId": "bob_developer",
+    "userName": "Bob (Fullstack & Smart Contract Dev)",
+    "totalMemories": 11,
+    "memories": [
+      {
+        "id": "9bc44049-ff9e-4c7a-8af1-1bb8fcf7ec74",
+        "userId": "bob_developer",
+        "namespace": "user_bob_developer",
+        "text": "Hey! Call me Bob, I am building AI dApps on Walrus and Sui.",
+        "timestamp": 1789916868058,
+        "blobId": "walrus_blob_786d55a9c315744c"
+      },
+      {
+        "id": "f9d31cca-f268-4f71-8beb-931be10a384e",
+        "userId": "bob_developer",
+        "namespace": "user_bob_developer",
+        "text": "My primary programming language is TypeScript with Next.js 15.",
+        "timestamp": 1789916868059,
+        "blobId": "walrus_blob_15f409e7e0495616"
+      },
+      {
+        "id": "35bd9742-4602-4787-a5f1-15d73b529f20",
+        "userId": "bob_developer",
+        "namespace": "user_bob_developer",
+        "text": "For smart contracts, I write Move for Sui and Solidity for EVM.",
+        "timestamp": 1789916868060,
+        "blobId": "walrus_blob_1936c310b932e9d2"
+      },
+      {
+        "id": "8e15a1f2-5637-4d23-8551-a9e1764faa47",
+        "userId": "bob_developer",
+        "namespace": "user_bob_developer",
+        "text": "My GitHub username is bob-dev-sui and I love open-source.",
+        "timestamp": 1789916868061,
+        "blobId": "walrus_blob_ef463dcb5ae553ce"
+      },
+      {
+        "id": "5123452e-c607-494e-9080-b71ee192e451",
+        "userId": "bob_developer",
+        "namespace": "user_bob_developer",
+        "text": "I always deploy my frontend on Vercel with automated CI/CD.",
+        "timestamp": 1789916868062,
+        "blobId": "walrus_blob_c8b364195c266bae"
+      },
+      {
+        "id": "2797b8e2-3f21-4b4f-abb5-e1829f0818d8",
+        "userId": "bob_developer",
+        "namespace": "user_bob_developer",
+        "text": "My preferred database is PostgreSQL paired with Drizzle ORM.",
+        "timestamp": 1789916868063,
+        "blobId": "walrus_blob_b7d866b530c70330"
+      },
+      {
+        "id": "03a814b0-f8cc-4d35-8c9b-070461579ebc",
+        "userId": "bob_developer",
+        "namespace": "user_bob_developer",
+        "text": "I use DeepSeek-V3 and Gemini-1.5-Pro for daily coding assistance.",
+        "timestamp": 1789916868064,
+        "blobId": "walrus_blob_060b926efddc7426"
+      },
+      {
+        "id": "5f63bc31-7658-476f-aab0-2be7364464d3",
+        "userId": "bob_developer",
+        "namespace": "user_bob_developer",
+        "text": "I need help optimizing RPC queries to prevent 429 rate limits.",
+        "timestamp": 1789916868067,
+        "blobId": "walrus_blob_19236501b9dd4308"
+      },
+      {
+        "id": "0fd62ca1-8775-4d49-9440-de5d75e33ecf",
+        "userId": "bob_developer",
+        "namespace": "user_bob_developer",
+        "text": "My project budget is $5,000 in SUI tokens for testnet grants.",
+        "timestamp": 1789916868068,
+        "blobId": "walrus_blob_a848b7bdfb06ac28"
+      },
+      {
+        "id": "a9c9b5bc-9245-4866-827c-c09e5b149e6b",
+        "userId": "bob_developer",
+        "namespace": "user_bob_developer",
+        "text": "I prefer dark mode interfaces with WCAG AA compliance.",
+        "timestamp": 1789916868069,
+        "blobId": "walrus_blob_9261fb8e7c972745"
+      },
+      {
+        "id": "48ae8a20-dec0-4625-808d-1d27374f4570",
+        "userId": "bob_developer",
+        "namespace": "user_bob_developer",
+        "text": "What tech stack do you remember that I am using for my dApp?",
+        "timestamp": 1789916868070,
+        "blobId": "walrus_blob_1adcb931c2722c64"
+      }
+    ],
+    "turns": [
+      {
+        "turn": 1,
+        "userMessage": "Hey! Call me Bob, I am building AI dApps on Walrus and Sui.",
+        "recalled": [],
+        "botReply": "Hello! I have recorded your message: \"Hey! Call me Bob, I am building AI dApps on Walrus and Sui.\". How can I help you further today?",
+        "totalStored": 1
+      },
+      {
+        "turn": 2,
+        "userMessage": "My primary programming language is TypeScript with Next.js 15.",
+        "recalled": [
+          "Hey! Call me Bob, I am building AI dApps on Walrus and Sui."
+        ],
+        "botReply": "I remember from our previous conversation that Hey! Call me Bob, I am building AI dApps on Walrus and Sui.. Regarding \"My primary programming language is TypeScript with Next.js 15.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 2
+      },
+      {
+        "turn": 3,
+        "userMessage": "For smart contracts, I write Move for Sui and Solidity for EVM.",
+        "recalled": [
+          "Hey! Call me Bob, I am building AI dApps on Walrus and Sui.",
+          "My primary programming language is TypeScript with Next.js 15."
+        ],
+        "botReply": "I remember from our previous conversation that Hey! Call me Bob, I am building AI dApps on Walrus and Sui.; My primary programming language is TypeScript with Next.js 15.. Regarding \"For smart contracts, I write Move for Sui and Solidity for EVM.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 3
+      },
+      {
+        "turn": 4,
+        "userMessage": "My GitHub username is bob-dev-sui and I love open-source.",
+        "recalled": [
+          "Hey! Call me Bob, I am building AI dApps on Walrus and Sui.",
+          "For smart contracts, I write Move for Sui and Solidity for EVM.",
+          "My primary programming language is TypeScript with Next.js 15."
+        ],
+        "botReply": "I remember from our previous conversation that Hey! Call me Bob, I am building AI dApps on Walrus and Sui.; For smart contracts, I write Move for Sui and Solidity for EVM.; My primary programming language is TypeScript with Next.js 15.. Regarding \"My GitHub username is bob-dev-sui and I love open-source.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 4
+      },
+      {
+        "turn": 5,
+        "userMessage": "I always deploy my frontend on Vercel with automated CI/CD.",
+        "recalled": [
+          "My GitHub username is bob-dev-sui and I love open-source.",
+          "My primary programming language is TypeScript with Next.js 15.",
+          "Hey! Call me Bob, I am building AI dApps on Walrus and Sui.",
+          "For smart contracts, I write Move for Sui and Solidity for EVM."
+        ],
+        "botReply": "I remember from our previous conversation that My GitHub username is bob-dev-sui and I love open-source.; My primary programming language is TypeScript with Next.js 15.; Hey! Call me Bob, I am building AI dApps on Walrus and Sui.; For smart contracts, I write Move for Sui and Solidity for EVM.. Regarding \"I always deploy my frontend on Vercel with automated CI/CD.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 5
+      },
+      {
+        "turn": 6,
+        "userMessage": "My preferred database is PostgreSQL paired with Drizzle ORM.",
+        "recalled": [
+          "My primary programming language is TypeScript with Next.js 15.",
+          "I always deploy my frontend on Vercel with automated CI/CD.",
+          "My GitHub username is bob-dev-sui and I love open-source.",
+          "For smart contracts, I write Move for Sui and Solidity for EVM.",
+          "Hey! Call me Bob, I am building AI dApps on Walrus and Sui."
+        ],
+        "botReply": "I remember from our previous conversation that My primary programming language is TypeScript with Next.js 15.; I always deploy my frontend on Vercel with automated CI/CD.; My GitHub username is bob-dev-sui and I love open-source.; For smart contracts, I write Move for Sui and Solidity for EVM.; Hey! Call me Bob, I am building AI dApps on Walrus and Sui.. Regarding \"My preferred database is PostgreSQL paired with Drizzle ORM.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 6
+      },
+      {
+        "turn": 7,
+        "userMessage": "I use DeepSeek-V3 and Gemini-1.5-Pro for daily coding assistance.",
+        "recalled": [
+          "For smart contracts, I write Move for Sui and Solidity for EVM.",
+          "My GitHub username is bob-dev-sui and I love open-source.",
+          "Hey! Call me Bob, I am building AI dApps on Walrus and Sui.",
+          "I always deploy my frontend on Vercel with automated CI/CD.",
+          "My preferred database is PostgreSQL paired with Drizzle ORM."
+        ],
+        "botReply": "I remember from our previous conversation that For smart contracts, I write Move for Sui and Solidity for EVM.; My GitHub username is bob-dev-sui and I love open-source.; Hey! Call me Bob, I am building AI dApps on Walrus and Sui.; I always deploy my frontend on Vercel with automated CI/CD.; My preferred database is PostgreSQL paired with Drizzle ORM.. Regarding \"I use DeepSeek-V3 and Gemini-1.5-Pro for daily coding assistance.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 7
+      },
+      {
+        "turn": 8,
+        "userMessage": "I need help optimizing RPC queries to prevent 429 rate limits.",
+        "recalled": [
+          "I use DeepSeek-V3 and Gemini-1.5-Pro for daily coding assistance.",
+          "I always deploy my frontend on Vercel with automated CI/CD.",
+          "My GitHub username is bob-dev-sui and I love open-source.",
+          "For smart contracts, I write Move for Sui and Solidity for EVM.",
+          "Hey! Call me Bob, I am building AI dApps on Walrus and Sui."
+        ],
+        "botReply": "I remember from our previous conversation that I use DeepSeek-V3 and Gemini-1.5-Pro for daily coding assistance.; I always deploy my frontend on Vercel with automated CI/CD.; My GitHub username is bob-dev-sui and I love open-source.; For smart contracts, I write Move for Sui and Solidity for EVM.; Hey! Call me Bob, I am building AI dApps on Walrus and Sui.. Regarding \"I need help optimizing RPC queries to prevent 429 rate limits.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 8
+      },
+      {
+        "turn": 9,
+        "userMessage": "My project budget is $5,000 in SUI tokens for testnet grants.",
+        "recalled": [
+          "My GitHub username is bob-dev-sui and I love open-source.",
+          "I use DeepSeek-V3 and Gemini-1.5-Pro for daily coding assistance.",
+          "My preferred database is PostgreSQL paired with Drizzle ORM.",
+          "For smart contracts, I write Move for Sui and Solidity for EVM.",
+          "My primary programming language is TypeScript with Next.js 15."
+        ],
+        "botReply": "I remember from our previous conversation that My GitHub username is bob-dev-sui and I love open-source.; I use DeepSeek-V3 and Gemini-1.5-Pro for daily coding assistance.; My preferred database is PostgreSQL paired with Drizzle ORM.; For smart contracts, I write Move for Sui and Solidity for EVM.; My primary programming language is TypeScript with Next.js 15.. Regarding \"My project budget is $5,000 in SUI tokens for testnet grants.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 9
+      },
+      {
+        "turn": 10,
+        "userMessage": "I prefer dark mode interfaces with WCAG AA compliance.",
+        "recalled": [
+          "I always deploy my frontend on Vercel with automated CI/CD.",
+          "I need help optimizing RPC queries to prevent 429 rate limits.",
+          "I use DeepSeek-V3 and Gemini-1.5-Pro for daily coding assistance.",
+          "My preferred database is PostgreSQL paired with Drizzle ORM.",
+          "My GitHub username is bob-dev-sui and I love open-source."
+        ],
+        "botReply": "I remember from our previous conversation that I always deploy my frontend on Vercel with automated CI/CD.; I need help optimizing RPC queries to prevent 429 rate limits.; I use DeepSeek-V3 and Gemini-1.5-Pro for daily coding assistance.; My preferred database is PostgreSQL paired with Drizzle ORM.; My GitHub username is bob-dev-sui and I love open-source.. Regarding \"I prefer dark mode interfaces with WCAG AA compliance.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 10
+      },
+      {
+        "turn": 11,
+        "userMessage": "What tech stack do you remember that I am using for my dApp?",
+        "recalled": [
+          "My project budget is $5,000 in SUI tokens for testnet grants.",
+          "I use DeepSeek-V3 and Gemini-1.5-Pro for daily coding assistance.",
+          "I always deploy my frontend on Vercel with automated CI/CD.",
+          "My GitHub username is bob-dev-sui and I love open-source.",
+          "For smart contracts, I write Move for Sui and Solidity for EVM."
+        ],
+        "botReply": "I remember from our previous conversation that My project budget is $5,000 in SUI tokens for testnet grants.; I use DeepSeek-V3 and Gemini-1.5-Pro for daily coding assistance.; I always deploy my frontend on Vercel with automated CI/CD.; My GitHub username is bob-dev-sui and I love open-source.; For smart contracts, I write Move for Sui and Solidity for EVM.. Regarding \"What tech stack do you remember that I am using for my dApp?\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 11
+      }
+    ]
+  },
+  {
+    "userId": "charlie_support",
+    "userName": "Charlie (Enterprise Customer Support Lead)",
+    "totalMemories": 11,
+    "memories": [
+      {
+        "id": "2bc8fbc1-ad90-48f4-9022-643ef22416c1",
+        "userId": "charlie_support",
+        "namespace": "user_charlie_support",
+        "text": "Hello, I am Charlie, head of technical support at CloudScale.",
+        "timestamp": 1789916868072,
+        "blobId": "walrus_blob_5ce8921d9fa0d0b4"
+      },
+      {
+        "id": "f2dcb5e4-a109-4e49-b1bd-0455cac23052",
+        "userId": "charlie_support",
+        "namespace": "user_charlie_support",
+        "text": "Our enterprise account ID is CS-9942-CORP.",
+        "timestamp": 1789916868073,
+        "blobId": "walrus_blob_c1ce363fed684ece"
+      },
+      {
+        "id": "d08148e4-144b-4a25-81f4-91ec0af9a472",
+        "userId": "charlie_support",
+        "namespace": "user_charlie_support",
+        "text": "We have 45 active client support agents across 3 global regions.",
+        "timestamp": 1789916868074,
+        "blobId": "walrus_blob_be3ff62ecd8254c7"
+      },
+      {
+        "id": "c4479392-5336-40b2-a1fd-e75ebcba1292",
+        "userId": "charlie_support",
+        "namespace": "user_charlie_support",
+        "text": "Our SLA requires resolution within 15 minutes for Tier 1 incidents.",
+        "timestamp": 1789916868075,
+        "blobId": "walrus_blob_32735512fb212673"
+      },
+      {
+        "id": "ad9649d2-f54b-4c44-ab9d-4048ad13c3ed",
+        "userId": "charlie_support",
+        "namespace": "user_charlie_support",
+        "text": "I prefer receiving weekly CSV digests of ticket escalations.",
+        "timestamp": 1789916868076,
+        "blobId": "walrus_blob_4b1522a7a95083d7"
+      },
+      {
+        "id": "fdfff203-6d01-47a6-a64c-bd6c8831e894",
+        "userId": "charlie_support",
+        "namespace": "user_charlie_support",
+        "text": "Our escalation webhook URL is https://api.cloudscale.internal/webhooks/ops.",
+        "timestamp": 1789916868077,
+        "blobId": "walrus_blob_2960a611c6ea97e7"
+      },
+      {
+        "id": "239e3bd2-088f-4e50-9ae9-e3d1b0fe3006",
+        "userId": "charlie_support",
+        "namespace": "user_charlie_support",
+        "text": "We are migrating customer documentation to Walrus Decentralized Storage.",
+        "timestamp": 1789916868078,
+        "blobId": "walrus_blob_5affff92b4b82c2a"
+      },
+      {
+        "id": "324e5ae9-869c-4c5d-9991-2d310c1045ba",
+        "userId": "charlie_support",
+        "namespace": "user_charlie_support",
+        "text": "My direct contact email is charlie.ops@cloudscale.xyz for emergency outages.",
+        "timestamp": 1789916868079,
+        "blobId": "walrus_blob_00c697e01e592fa2"
+      },
+      {
+        "id": "f52a5d7b-79f6-48c6-a166-f39b6fb74cd2",
+        "userId": "charlie_support",
+        "namespace": "user_charlie_support",
+        "text": "Our primary support channel is Telegram Bot and Zendesk integration.",
+        "timestamp": 1789916868080,
+        "blobId": "walrus_blob_3daf3bf8103b900e"
+      },
+      {
+        "id": "efdf5a97-a5d0-47f7-bc5e-7fde599c02ea",
+        "userId": "charlie_support",
+        "namespace": "user_charlie_support",
+        "text": "I am testing Walrus Memory to replace Redis session store.",
+        "timestamp": 1789916868082,
+        "blobId": "walrus_blob_ba90d0ce7ea83ebb"
+      },
+      {
+        "id": "b2ef5f97-c987-4b3e-a747-c82d233dff47",
+        "userId": "charlie_support",
+        "namespace": "user_charlie_support",
+        "text": "Could you verify our company account ID and emergency contact details?",
+        "timestamp": 1789916868083,
+        "blobId": "walrus_blob_f2b7a8dceb04744c"
+      }
+    ],
+    "turns": [
+      {
+        "turn": 1,
+        "userMessage": "Hello, I am Charlie, head of technical support at CloudScale.",
+        "recalled": [],
+        "botReply": "Hello! I have recorded your message: \"Hello, I am Charlie, head of technical support at CloudScale.\". How can I help you further today?",
+        "totalStored": 1
+      },
+      {
+        "turn": 2,
+        "userMessage": "Our enterprise account ID is CS-9942-CORP.",
+        "recalled": [
+          "Hello, I am Charlie, head of technical support at CloudScale."
+        ],
+        "botReply": "I remember from our previous conversation that Hello, I am Charlie, head of technical support at CloudScale.. Regarding \"Our enterprise account ID is CS-9942-CORP.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 2
+      },
+      {
+        "turn": 3,
+        "userMessage": "We have 45 active client support agents across 3 global regions.",
+        "recalled": [
+          "Hello, I am Charlie, head of technical support at CloudScale.",
+          "Our enterprise account ID is CS-9942-CORP."
+        ],
+        "botReply": "I remember from our previous conversation that Hello, I am Charlie, head of technical support at CloudScale.; Our enterprise account ID is CS-9942-CORP.. Regarding \"We have 45 active client support agents across 3 global regions.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 3
+      },
+      {
+        "turn": 4,
+        "userMessage": "Our SLA requires resolution within 15 minutes for Tier 1 incidents.",
+        "recalled": [
+          "Our enterprise account ID is CS-9942-CORP.",
+          "We have 45 active client support agents across 3 global regions.",
+          "Hello, I am Charlie, head of technical support at CloudScale."
+        ],
+        "botReply": "I remember from our previous conversation that Our enterprise account ID is CS-9942-CORP.; We have 45 active client support agents across 3 global regions.; Hello, I am Charlie, head of technical support at CloudScale.. Regarding \"Our SLA requires resolution within 15 minutes for Tier 1 incidents.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 4
+      },
+      {
+        "turn": 5,
+        "userMessage": "I prefer receiving weekly CSV digests of ticket escalations.",
+        "recalled": [
+          "Hello, I am Charlie, head of technical support at CloudScale.",
+          "Our SLA requires resolution within 15 minutes for Tier 1 incidents.",
+          "We have 45 active client support agents across 3 global regions.",
+          "Our enterprise account ID is CS-9942-CORP."
+        ],
+        "botReply": "I remember from our previous conversation that Hello, I am Charlie, head of technical support at CloudScale.; Our SLA requires resolution within 15 minutes for Tier 1 incidents.; We have 45 active client support agents across 3 global regions.; Our enterprise account ID is CS-9942-CORP.. Regarding \"I prefer receiving weekly CSV digests of ticket escalations.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 5
+      },
+      {
+        "turn": 6,
+        "userMessage": "Our escalation webhook URL is https://api.cloudscale.internal/webhooks/ops.",
+        "recalled": [
+          "Our enterprise account ID is CS-9942-CORP.",
+          "Our SLA requires resolution within 15 minutes for Tier 1 incidents.",
+          "Hello, I am Charlie, head of technical support at CloudScale.",
+          "I prefer receiving weekly CSV digests of ticket escalations.",
+          "We have 45 active client support agents across 3 global regions."
+        ],
+        "botReply": "I remember from our previous conversation that Our enterprise account ID is CS-9942-CORP.; Our SLA requires resolution within 15 minutes for Tier 1 incidents.; Hello, I am Charlie, head of technical support at CloudScale.; I prefer receiving weekly CSV digests of ticket escalations.; We have 45 active client support agents across 3 global regions.. Regarding \"Our escalation webhook URL is https://api.cloudscale.internal/webhooks/ops.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 6
+      },
+      {
+        "turn": 7,
+        "userMessage": "We are migrating customer documentation to Walrus Decentralized Storage.",
+        "recalled": [
+          "We have 45 active client support agents across 3 global regions.",
+          "Our escalation webhook URL is https://api.cloudscale.internal/webhooks/ops.",
+          "I prefer receiving weekly CSV digests of ticket escalations.",
+          "Our SLA requires resolution within 15 minutes for Tier 1 incidents.",
+          "Our enterprise account ID is CS-9942-CORP."
+        ],
+        "botReply": "I remember from our previous conversation that We have 45 active client support agents across 3 global regions.; Our escalation webhook URL is https://api.cloudscale.internal/webhooks/ops.; I prefer receiving weekly CSV digests of ticket escalations.; Our SLA requires resolution within 15 minutes for Tier 1 incidents.; Our enterprise account ID is CS-9942-CORP.. Regarding \"We are migrating customer documentation to Walrus Decentralized Storage.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 7
+      },
+      {
+        "turn": 8,
+        "userMessage": "My direct contact email is charlie.ops@cloudscale.xyz for emergency outages.",
+        "recalled": [
+          "Our escalation webhook URL is https://api.cloudscale.internal/webhooks/ops.",
+          "Hello, I am Charlie, head of technical support at CloudScale.",
+          "Our SLA requires resolution within 15 minutes for Tier 1 incidents.",
+          "Our enterprise account ID is CS-9942-CORP.",
+          "We are migrating customer documentation to Walrus Decentralized Storage."
+        ],
+        "botReply": "I remember from our previous conversation that Our escalation webhook URL is https://api.cloudscale.internal/webhooks/ops.; Hello, I am Charlie, head of technical support at CloudScale.; Our SLA requires resolution within 15 minutes for Tier 1 incidents.; Our enterprise account ID is CS-9942-CORP.; We are migrating customer documentation to Walrus Decentralized Storage.. Regarding \"My direct contact email is charlie.ops@cloudscale.xyz for emergency outages.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 8
+      },
+      {
+        "turn": 9,
+        "userMessage": "Our primary support channel is Telegram Bot and Zendesk integration.",
+        "recalled": [
+          "Our escalation webhook URL is https://api.cloudscale.internal/webhooks/ops.",
+          "Our enterprise account ID is CS-9942-CORP.",
+          "My direct contact email is charlie.ops@cloudscale.xyz for emergency outages.",
+          "Our SLA requires resolution within 15 minutes for Tier 1 incidents.",
+          "We have 45 active client support agents across 3 global regions."
+        ],
+        "botReply": "I remember from our previous conversation that Our escalation webhook URL is https://api.cloudscale.internal/webhooks/ops.; Our enterprise account ID is CS-9942-CORP.; My direct contact email is charlie.ops@cloudscale.xyz for emergency outages.; Our SLA requires resolution within 15 minutes for Tier 1 incidents.; We have 45 active client support agents across 3 global regions.. Regarding \"Our primary support channel is Telegram Bot and Zendesk integration.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 9
+      },
+      {
+        "turn": 10,
+        "userMessage": "I am testing Walrus Memory to replace Redis session store.",
+        "recalled": [
+          "We are migrating customer documentation to Walrus Decentralized Storage.",
+          "Hello, I am Charlie, head of technical support at CloudScale.",
+          "I prefer receiving weekly CSV digests of ticket escalations.",
+          "Our primary support channel is Telegram Bot and Zendesk integration.",
+          "My direct contact email is charlie.ops@cloudscale.xyz for emergency outages."
+        ],
+        "botReply": "I remember from our previous conversation that We are migrating customer documentation to Walrus Decentralized Storage.; Hello, I am Charlie, head of technical support at CloudScale.; I prefer receiving weekly CSV digests of ticket escalations.; Our primary support channel is Telegram Bot and Zendesk integration.; My direct contact email is charlie.ops@cloudscale.xyz for emergency outages.. Regarding \"I am testing Walrus Memory to replace Redis session store.\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 10
+      },
+      {
+        "turn": 11,
+        "userMessage": "Could you verify our company account ID and emergency contact details?",
+        "recalled": [
+          "Our enterprise account ID is CS-9942-CORP.",
+          "Our primary support channel is Telegram Bot and Zendesk integration.",
+          "My direct contact email is charlie.ops@cloudscale.xyz for emergency outages.",
+          "Our escalation webhook URL is https://api.cloudscale.internal/webhooks/ops.",
+          "Our SLA requires resolution within 15 minutes for Tier 1 incidents."
+        ],
+        "botReply": "I remember from our previous conversation that Our enterprise account ID is CS-9942-CORP.; Our primary support channel is Telegram Bot and Zendesk integration.; My direct contact email is charlie.ops@cloudscale.xyz for emergency outages.; Our escalation webhook URL is https://api.cloudscale.internal/webhooks/ops.; Our SLA requires resolution within 15 minutes for Tier 1 incidents.. Regarding \"Could you verify our company account ID and emergency contact details?\": I've updated your preferences and can assist with this right away!",
+        "totalStored": 11
+      }
+    ]
+  }
+]
