@@ -89,6 +89,7 @@ npm start
 ## 🐛 Bug Bounty & Friction Points Surfaced
 
 During our integration with `MystenLabs/MemWal`, we identified:
+- **Official GitHub Bug Report:** [MystenLabs/MemWal#943](https://github.com/MystenLabs/MemWal/issues/943)
 1. **Premature Timeout in Python SDK `wait_for_remember_jobs`:** If the bulk status endpoint omits a pending job ID during polling, the SDK prematurely drops the unreturned job from the pending array, terminating the loop and marking the job as timed out within milliseconds instead of awaiting `timeout_ms`.
 2. **Missing Request Timeout on SDK Base Client:** `fetch()` in Node.js has no default timeout, which could cause indefinitely hung requests if the relayer drops connection during heavy load.
 
