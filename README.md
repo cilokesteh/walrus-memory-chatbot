@@ -90,7 +90,8 @@ npm start
 
 During our integration with `MystenLabs/MemWal`, we identified:
 - **Official GitHub Bug Report:** [MystenLabs/MemWal#943](https://github.com/MystenLabs/MemWal/issues/943)
-1. **Premature Timeout in Python SDK `wait_for_remember_jobs`:** If the bulk status endpoint omits a pending job ID during polling, the SDK prematurely drops the unreturned job from the pending array, terminating the loop and marking the job as timed out within milliseconds instead of awaiting `timeout_ms`.
+- **Article on Medium:** [How We Built a Chatbot That Never Forgets](ARTICLE.md)
+1. **Premature Timeout in Python SDK `wait_for_remember_jobs`:** If the bulk status endpoint omits a pending job ID during polling, the SDK prematurely drops the unreturned job from the pending array, terminating the loop in milliseconds and leaving pending jobs falsely classified as `"timeout"`. (Discrepancy with the TypeScript SDK's Set-based tracking).
 2. **Missing Request Timeout on SDK Base Client:** `fetch()` in Node.js has no default timeout, which could cause indefinitely hung requests if the relayer drops connection during heavy load.
 
 ---
